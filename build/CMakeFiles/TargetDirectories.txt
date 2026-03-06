@@ -1,0 +1,3 @@
+/home/Linux/Multithreaded-Proxy-Web-Server/build/CMakeFiles/proxy.dir
+/home/Linux/Multithreaded-Proxy-Web-Server/build/CMakeFiles/edit_cache.dir
+/home/Linux/Multithreaded-Proxy-Web-Server/build/CMakeFiles/rebuild_cache.dir

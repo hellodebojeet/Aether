@@ -1,0 +1,1 @@
+/usr/bin/cc  -g -Wall -D_GNU_SOURCE -Wl,--dependency-file=CMakeFiles/proxy.dir/link.d CMakeFiles/proxy.dir/proxy_server_with_cache.c.o CMakeFiles/proxy.dir/proxy_parse.c.o -o proxy  -lpthread
