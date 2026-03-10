@@ -86,14 +86,14 @@ Most proxy implementations rely on high-level frameworks. This project implement
 │  ├── Proxy-Authorization check           │
 │  │                                       │
 │  ├── CONNECT → tunnel_data(poll loop)    │
-│  │     └── transparent TCP tunnel       │
+│  │     └── transparent TCP tunnel        │
 │  │                                       │
 │  └── GET → cache lookup → handle_request │
 │        ├── Cache HIT → serve from cache  │
 │        └── Cache MISS                    │
 │              ├── inject If-None-Match    │
 │              ├── connect to origin       │
-│              ├── stream response client │
+│              ├── stream response client  │
 │              └── add_cache_element       │
 │                                          │
 │  LRU Cache (mutex-protected linked list) │
@@ -280,14 +280,14 @@ Fields: `timestamp client_ip method url status_code bytes latency cache_status`
 
 ##  Future Improvements
 
-- [ ] `epoll`-based event loop for C10K-scale concurrency
-- [ ] Disk-backed persistent cache (SQLite or `mmap`)
-- [ ] HTTP/2 protocol support via `nghttp2`
-- [ ] Config file for credentials, allowlist, and rate limits
-- [ ] Connection pooling to origin servers (keep-alive upstream)
-- [ ] Prometheus-compatible metrics export
-- [ ] TLS MITM proxy with dynamic certificate generation (for inspection use cases)
-- [ ] Load balancing across multiple upstream servers
+-  `epoll`-based event loop for C10K-scale concurrency
+-  Disk-backed persistent cache (SQLite or `mmap`)
+-  HTTP/2 protocol support via `nghttp2`
+-  Config file for credentials, allowlist, and rate limits
+-  Connection pooling to origin servers (keep-alive upstream)
+-  Prometheus-compatible metrics export
+-  TLS MITM proxy with dynamic certificate generation (for inspection use cases)
+-  Load balancing across multiple upstream servers
 
 ---
 
